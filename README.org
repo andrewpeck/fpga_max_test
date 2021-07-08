@@ -1,0 +1,17 @@
+#+TITLE: MAX Test
+
+Firmware to use a large (but programmable amount of FPGA resources).
+Based on firmware written by Alex Madorsky
+
+
+Adjust to your liking the parameters:
+
+#+begin_src verilog
+parameter R     = 11000; // number of shift registers
+parameter SN    = 144; // length of each shift register
+parameter BRAMS = 1500;
+#+end_src
+
+Make sure to update the XDC file with ports and clock frequency.
+- clk should be a clock
+- outp should be an unconnected pin, or at least a pin that can be driven with arbitrary signals without causing damage.
